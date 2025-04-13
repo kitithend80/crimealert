@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrimeWatch</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('your-map-background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+header.navbar {
+  background-color: #000000;  /* Black navbar */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;  /* White logo for contrast */
+}
+
+.nav-links a {
+  color: #ffffff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #f39c12;  /* Yellow hover effect */
+}
+.login-button {
+  background-color: #e74c3c;  /* Red for login button */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-links a.login {
+      padding: 8px 14px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 60px 40px;
+      align-items: center;
+      justify-content: space-between;
+      background-color: black;
+      min-height: 90vh;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .hero-img {
+      width: 700px;
+      height:400px;
+      margin-top: 20px;
+    }
+
+    .hero-img img {
+      width: 100%;
+      
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-img {
+        margin-top: 40px;
+      }
+    }
+    
+   
+    .semicircle-banner {
+      background: white;
+      border-top-left-radius: 100% 50%;
+      border-top-right-radius: 100% 50%;
+      overflow: hidden;
+      margin-top: 60px;
+      padding-top: 40px;
+      position: relative;
+      text-align: center;
+    }
+
+    .banner-image-wrapper {
+      position: relative;
+    }
+
+    .banner-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 0 0 50% 50%;
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .features-section {
+  background-color: #000;
+  color: white;
+  padding: 60px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.feature-box {
+  flex: 1 1 300px;
+  background-color: #111;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.feature-box .icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.feature-box h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.feature-box p {
+  font-size: 1em;
+  color: #ccc;
+  line-height: 1.6;
+}
+.horizontal-info-section {
+  background-color: white;
+  color: #111;
+  padding: 60px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: left;
+}
+
+.info-box {
+  flex: 1 1 300px;
+  background-color: #f9f9f9;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+}
+
+.info-box h3 {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.info-box p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+ footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+
+  </style>
+</head>
+<body>
+    <header class="navbar">
+  <div class="logo">🛡 CrimeWatch</div>
+  <nav class="nav-links">
+    <a href="Home.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="crimereport.html">Crime Report</a>
+    <a href="livecrimealerts.html">Live Crime Alerts</a>
+    <a href="about.html">About</a>
+    <a href="crimestat.html">Crime Statistics</a>
+    <a href="safetytips.html">Safety Tips</a>
+  </nav>
+  <a href="register.html" class="login-button">Register/Login</a>
+</header>
+  
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Where communities stay alert, together.</h1>
+      <p>
+        CrimeWatch is your neighborhood safety platform. Stay informed with real-time crime alerts, community reports,
+        and tools to keep you and your loved ones secure. Get updates, connect with responders, and protect what matters.
+      </p>
+    </div>
+   <div class="hero-img">
+  <h2 style="margin-bottom: 15px; font-size: 1.6em;">Introducing CrimeWatch</h2>
+  <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);">
+    <iframe 
+      width="100%" 
+      height="315" 
+      src="https://www.youtube.com/embed/30ZEltrGHYE?autoplay=1&mute=1" 
+      title="CrimeWatch video preview" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+  </section>
+<section style="background-color: white; color: black; padding: 60px 40px; text-align: center;">
+  <h3 style="text-transform: uppercase; color: #777; letter-spacing: 1px; font-size: 0.9em; margin-bottom: 10px;">
+    Life-Saving Alerts
+  </h3>
+  <h2 style="font-size: 2.2em; font-weight: 600; margin-bottom: 40px;">
+    CrimeWatch is a force for good in the world.
+  </h2>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+    <!-- Alert Card 1 -->
+    <div style="text-align: center;">
+      <img src="https://assets.nst.com.my/images/articles/blazw09_1504946920.jpg" alt="Alert 1" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #eee;" />
+      <p style="margin-top: 10px;">Man Rescued from Warehouse Fire</p>
+    </div>
+    
+    <!-- Alert Card 2 -->
+    <div style="text-align: center;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDXfY9DaYCb8mPrq5wcoZ8EPJ01Lgmh0_tjA&s" alt="Alert 2" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #eee;" />
+      <p style="margin-top: 10px;">Lost Pet Returned Home</p>
+    </div>
+    
+    <!-- Alert Card 3 -->
+    <div style="text-align: center;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh8BFHe4DfLmnC4dYDmdDjCmuk_IYz8IhQ0w&s" alt="Alert 3" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #eee;" />
+      <p style="margin-top: 10px;">Family Escapes Fire Safely</p>
+    </div>
+    
+    <!-- Alert Card 4 -->
+    <div style="text-align: center;">
+      <img src="https://cdn.prod.website-files.com/55901fc477ce56cf3faf3028/563adb418684035312232e38_reyesd.jpg" alt="Alert 4" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #eee;" />
+      <p style="margin-top: 10px;">Missing Child Found</p>
+    </div>
+    
+    <!-- Alert Card 5 -->
+    <div style="text-align: center;">
+      <img src="https://images.foxtv.com/static.fox4news.com/www.fox4news.com/content/uploads/2024/11/320/250/112224-sky-4-950am-kdfweme002_09_50_27_1_mpg_00.15.34.50.jpg?ve=1&tl=1" alt="Alert 5" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #eee;" />
+      <p style="margin-top: 10px;">Driver Saved from Shootout</p>
+    </div>
+  </div>
+</section>
+ <section class="semicircle-banner">
+    <div class="banner-image-wrapper">
+      <img src="https://cdn.isid.com/wp-content/uploads/sites/7/2023/07/hero-safecity2.jpg" alt="Safe World Image" class="banner-img">
+      <div class="banner-text">Your World is <br> Safer with Crimewatch</div>
+    </div>
+  </section>
+<section class="features-section">
+  <div class="feature-box">
+    <div class="icon">⚠</div>
+    <h3>Get safety alerts when they matter to you — in real time.</h3>
+    <p>
+      Be situationally aware. CrimeWatch alerts go out within seconds of a 911 or user report.
+      If there’s an incident, like a robbery, nearby, you’ll know to avoid that area.
+    </p>
+  </div>
+  <div class="feature-box">
+    <div class="icon">👥</div>
+    <h3>Know what’s happening so you and your loved ones can stay safe.</h3>
+    <p>
+      Connect with your family, friends, and neighbors on CrimeWatch and find out when something important
+      is happening around them.
+    </p>
+  </div>
+  <div class="feature-box">
+    <div class="icon">🧠</div>
+    <h3>Always know why the helicopter is overhead.</h3>
+    <p>
+      If there’s commotion like police activity, helicopters overhead, or road closures, pull up the app
+      and know why instantly.
+    </p>
+  </div>
+</section>
+<section class="horizontal-info-section">
+  <div class="info-box">
+    <h3>See incidents unfold and get the real story</h3>
+    <p>
+      Live videos show you what’s really happening. Watch incidents unfold from different angles 
+      and follow along until they get resolved.
+    </p>
+  </div>
+  <div class="info-box">
+    <h3>Fast, accurate information makes a difference</h3>
+    <p>
+      Citizen alerts go out instantly — this can be hours before Amber Alerts are even issued. 
+      Speed matters in emergencies like abductions and missing persons.
+    </p>
+  </div>
+  <div class="info-box">
+    <h3>Help resolve situations in real time</h3>
+    <p>
+      Broadcast live video or leave comments to share tips. Your contribution can help locate missing people 
+      or inform others during emergencies like natural disasters.
+    </p>
+  </div>
+</section>
+<section class="horizontal-info-section">
+  <div class="info-box">
+    <h3>Stay informed wherever you go</h3>
+    <p>
+      Get instant notifications on your phone, no matter where you are. Stay ahead of danger, even when you’re away from home.
+    </p>
+  </div>
+  <div class="info-box">
+    <h3>Empower your neighborhood</h3>
+    <p>
+      Build trust and cooperation in your area. Share crime tips, watch out for each other, and create a safer place for everyone.
+    </p>
+  </div>
+  <div class="info-box">
+    <h3>One tap reporting</h3>
+    <p>
+      See something suspicious? Report it directly through CrimeWatch with location, description, and even live video.
+    </p>
+  </div>
+</section>
+     <footer>
+          Stay Safe. Stay Aware. | <strong>CrimeWatch</strong>
+      </footer>
+
+   
+</body>
+</html>

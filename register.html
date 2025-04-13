@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CrimeAlert - Citizen Registration</title>
+  
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to right, #000000, #1c1c1c);
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+   /* Header Navbar */
+
+header.navbar {
+  background-color: #000000;  /* Black navbar */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;  /* White logo for contrast */
+}
+
+.nav-links a {
+  color: #ffffff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #f39c12;  /* Yellow hover effect */
+}
+.login-button {
+  background-color: #e74c3c;  /* Red for login button */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-links a.login {
+      padding: 8px 14px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+
+    .register {
+      background: #000;
+      margin-top: 3%;
+      padding: 3%;
+      border-radius: 10px;
+    }
+
+    .register-left {
+      text-align: center;
+      color: #fff;
+      margin-top: 4%;
+    }
+
+    .register-left img {
+      margin-top: 15%;
+      margin-bottom: 5%;
+      width: 80px;
+    }
+
+    .register-left input {
+      border: none;
+      padding: 10px 30px;
+      width: 100%;
+      background: #ff0000;
+      font-weight: bold;
+      color: #fff;
+      margin-top: 20%;
+      margin-bottom: 3%;
+      cursor: pointer;
+      border-radius: 50px;
+    }
+
+    .register-right {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 3%;
+      box-shadow: 0 4px 20px rgba(255, 193, 7, 0.1);
+    }
+
+    .register-heading {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffc107;
+      font-size: 1.8em;
+      position: relative;
+    }
+
+    .register-heading::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: #ffc107;
+      margin: 10px auto 0;
+    }
+
+    .register-form {
+      padding: 0 10%;
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+    .form-group i {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      color: #aaa;
+    }
+
+    .form-control {
+      margin-bottom: 15px;
+      border-radius: 20px;
+      padding-left: 40px;
+      background-color: #111;
+      color: #fff;
+      border: 1px solid #333;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .form-control::placeholder {
+      color: #aaa;
+    }
+
+    .form-control:focus {
+      border-color: #ffc107;
+      box-shadow: 0 0 5px #ffc107;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .btnRegister {
+      margin-top: 10px;
+      border: none;
+      padding: 10px 30px;
+      background: #ffc107;
+      color: #000;
+      font-weight: 600;
+      width: 100%;
+      border-radius: 50px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btnRegister:hover {
+      background: #e0a800;
+      transform: scale(1.05);
+    }
+
+    .radio.inline {
+      margin-right: 15px;
+    }
+
+    .radio span {
+      margin-left: 5px;
+      color: #ccc;
+    }
+
+    .emergency-section {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #444;
+    }
+
+    .emergency-section h4 {
+      color: #ffc107;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    hr {
+      border-color: #444;
+    }
+
+    input[required]::placeholder {
+      color: #ff4f4f;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #ffc107;
+      font-size: 1.2em;
+      border-bottom: 1px solid #333;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .register-left {
+        display: none;
+      }
+
+      .register {
+        margin-top: 20px;
+        padding: 10px;
+      }
+
+      .register-right {
+        padding: 20px;
+      }
+
+      .form-control {
+        padding-left: 15px;
+      }
+
+      .form-group i {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">🛡 CrimeWatch</div>
+  <nav class="nav-links">
+    <a href="Home.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="crimereport.html">Crime Report</a>
+    <a href="livecrimealerts.html">Live Crime Alerts</a>
+    <a href="about.html">About</a>
+    <a href="crimestat.html">Crime Statistics</a>
+    <a href="safetytips.html">Safety Tips</a>
+  </nav>
+  <a href="register.html" class="login-button">Register/Login</a>
+</header>
+  
+  </nav>
+
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    Be a responsible citizen. Stay informed. Stay safe.
+  </div>
+
+  <!-- Registration Form -->
+  <div class="container register">
+    <div class="row">
+      <div class="col-md-3 register-left">
+        <h1 style="color:red;"><i>“The safety of the people shall be the highest law."</i></h1><br>
+        <p>Report crimes quickly and safely. Your identity stays protected.</p>
+      </div>
+
+      <div class="col-md-9 register-right">
+        <h3 class="register-heading">Register as a Citizen</h3>
+        <form>
+          <div class="row register-form">
+            <div class="col-md-6 col-sm-12">
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                <input type="text" class="form-control" placeholder="First Name *" required />
+              </div>
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                <input type="text" class="form-control" placeholder="Last Name *" required />
+              </div>
+              <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control" placeholder="Password *" required />
+              </div>
+              <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control" placeholder="Confirm Password *" required />
+              </div>
+              <div class="form-group">
+                <label class="radio inline">
+                  <input type="radio" name="gender" value="male" checked />
+                  <span>Male</span>
+                </label>
+                <label class="radio inline">
+                  <input type="radio" name="gender" value="female" />
+                  <span>Female</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+              <div class="form-group">
+                <i class="fa fa-envelope"></i>
+                <input type="email" class="form-control" placeholder="Your Email *" required />
+              </div>
+              <div class="form-group">
+                <i class="fa fa-phone"></i>
+                <input type="text" minlength="10" maxlength="10" class="form-control" placeholder="Your Phone *" required />
+              </div>
+              <div class="form-group">
+                <select class="form-control" required>
+                  <option class="hidden" disabled selected>Please select your Security Question</option>
+                  <option>What is your Birthdate?</option>
+                  <option>What is your old Phone Number?</option>
+                  <option>What is your Pet Name?</option>
+                </select>
+              </div>
+
+              <hr />
+
+              <div class="row emergency-section">
+                <div class="col-md-12">
+                  <h4>Emergency Contact Details</h4>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Emergency Contact Full Name *" required />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" minlength="10" maxlength="10" class="form-control" placeholder="Emergency Contact Number *" required />
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Emergency Contact Email (optional)" />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Emergency Contact Relationship to You *" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <i class="fa fa-key"></i>
+                <input type="text" class="form-control" placeholder="Enter Your Security Question Answer *" required />
+              </div>
+              <input type="submit" class="btnRegister" value="Register" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

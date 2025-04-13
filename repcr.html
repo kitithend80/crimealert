@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Report a Crime</title>
+<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styler.css" />
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">🛡 CrimeWatch</div>
+  <nav class="nav-links">
+    <a href="Home.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="crimereport.html">Crime Report</a>
+    <a href="livecrimealerts.html">Live Crime Alerts</a>
+    <a href="about.html">About</a>
+    <a href="crimestat.html">Crime Statistics</a>
+    <a href="safetytips.html">Safety Tips</a>
+  </nav>
+  <a href="register.html" class="login-button">Register/Login</a>
+</header>
+  
+  </nav>
+
+ <section class="hero">
+  <h1>Where your voice helps protect.</h1>
+  <p>Your safety matters. Report crimes and build a safer world together.</p>
+  <a href="#report-form" class="btn">Report Now</a>
+</section>
+
+
+  <section id="report-form" class="form-section">
+    <h2 style="color: black;">Crime Report Form</h2>
+    <form>
+      <input type="text" placeholder="Full Name (Optional)" />
+      <input type="email" placeholder="Email (Optional)" />
+      <input type="tel" placeholder="Phone Number (Optional)" />
+      
+      <select>
+        <option disabled selected>Type of Crime</option>
+        <option>Theft</option>
+        <option>Harassment</option>
+        <option>Cybercrime</option>
+        <option>Violence</option>
+        <option>Other</option>
+      </select>
+
+      <input type="datetime-local" />
+      <input type="text" placeholder="Location" />
+      
+      <textarea placeholder="Describe the incident..."></textarea>
+      <input type="file" />
+
+      <label style="color: black;">
+        <input type="checkbox" /> Submit anonymously
+      </label>
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>  2Fast   |   Emergency? Call us:XXX-XXX</p>
+  </footer>
+
+</body>
+</html>

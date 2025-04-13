@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #1a1a1a;  /* Dark grey background for the body */
+  color: #f4f6f9;  /* Light grey text for readability */
+}
+
+
+header.navbar {
+  background-color: #000000;  /* Black navbar */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;  /* White logo for contrast */
+}
+
+.nav-links a {
+  color: #ffffff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #f39c12;  /* Yellow hover effect */
+}
+.login-button {
+  background-color: #e74c3c;  /* Red for login button */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-links a.login {
+      padding: 8px 14px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+
+/* Hero Section */
+.hero {
+  background-color: #2a2424 ;  /* Dark red for the first section */
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .btn {
+  background-color: #27ae60;  /* Green for the button */
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Form Section */
+.form-section {
+  background-color: white ;  /* Dark red for the form background */
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #f4f6f9;  /* Light grey for the form heading */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, select, textarea {
+  padding: 0.8rem;
+  border: 1px solid #bdc3c7;  /* Light grey border */
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  background-color: #e74c3c;  /* Red-orange for the submit button */
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;  /* Black footer to match the navbar */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

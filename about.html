@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Crime Alert</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      background: linear-gradient(120deg, #000000 0%, #1a1a1a 100%);
+    }
+/* Header Navbar */
+
+header.navbar {
+  background-color: #000000;  /* Black navbar */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;  /* White logo for contrast */
+}
+
+.nav-links a {
+  color: #ffffff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #f39c12;  /* Yellow hover effect */
+}
+.login-button {
+  background-color: #e74c3c;  /* Red for login button */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-links a.login {
+      padding: 8px 14px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+       .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #f04e4e;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #bbb;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 40px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      border-left: 4px solid #f04e4e;
+      padding-left: 10px;
+    }
+
+    section p,
+    section li {
+      font-size: 18px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    section ul li::before {
+      content: "";
+    }
+
+    section ul li i {
+      color: #f04e4e;
+      margin-right: 8px;
+    }
+
+    .stats-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    .stat-box {
+      text-align: center;
+    }
+
+    .stat-box i {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: #f04e4e;
+    }
+
+    .stat-box h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin: 0;
+      color: #fff;
+    }
+
+    .stat-box p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .testimonial-section {
+      padding: 60px 20px;
+      background: #191919;
+    }
+
+    .testimonial-section h3 {
+      text-align: center;
+      color: #f04e4e;
+    }
+
+    .testimonial-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .testimonial {
+      background: #222;
+      border: 1px solid #333;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .testimonial h4 {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #666;
+      border-top: 1px solid #333;
+    }
+section h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  border-left: 4px solid #f04e4e;
+  padding-left: 10px;
+}
+
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 36px;
+      }
+
+      section {
+        padding: 30px 20px;
+      }
+
+      .stats-section {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+  <div class="logo">🛡 CrimeWatch</div>
+  <nav class="nav-links">
+    <a href="Home.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="crimereport.html">Crime Report</a>
+    <a href="livecrimealerts.html">Live Crime Alerts</a>
+    <a href="about.html">About</a>
+    <a href="crimestat.html">Crime Statistics</a>
+    <a href="safetytips.html">Safety Tips</a>
+  </nav>
+  <a href="register.html" class="login-button">Register/Login</a>
+</header>
+  
+  </nav>
+
+  <section class="hero">
+       <h2>Stay Safe. Stay Alert.</h2>
+    <p>Our mission is to make communities safer through real-time crime alerts and verified reports. Know what's happening around you — when it matters most.</p>
+  </section>
+
+  <section>
+    <h3><i class="fas fa-users"></i> Who We Are</h3>
+    <p>We are a team of passionate developers, analysts, and citizens driven by one shared goal: to make crime awareness accessible to everyone.</p>
+    <p>Our platform was built with the idea that knowing what’s happening in your area — in real time — can help save lives, prevent crime, and foster stronger communities.</p>
+  </section>
+
+  <section>
+    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+    <p>Our goal is simple: to empower individuals and communities with timely, verified, and location-based crime alerts.</p>
+    <p>By using technology to track and share incidents as they unfold, we aim to reduce risk, increase awareness, and create a network where safety is a shared responsibility.</p>
+  </section>
+<section>
+  <h3><i class="fas fa-bolt"></i> What Makes Us Different</h3>
+  <ul>
+    <li><i class="fas fa-bolt"></i> Real-time verified alerts</li>
+    <li><i class="fas fa-map-marker-alt"></i> Location-based incident tracking</li>
+    <li><i class="fas fa-user-secret"></i> Anonymous reporting system</li>
+    <li><i class="fas fa-hands-helping"></i> Built-in emergency resources</li>
+  </ul>
+</section>
+
+<section>
+ <video width="100%" controls style="margin-top: 20px; border-radius: 10px;">
+    <source src="C:\Users\Samhitha\Downloads\Globalization World Map Animation HD Blue (1).mp4"type="video/mp4">
+  </video>
+</section>
+  <section>
+    <h3><i class="fas fa-users-cog"></i> Community First</h3>
+    <p>We believe change begins at the community level. Our platform not only informs you — it encourages participation. Users can anonymously report suspicious activity, share safety tips, and support others through real-time information sharing.</p>
+  </section>
+
+  <section class="stats-section">
+    <div class="stat-box">
+      <i class="fas fa-bell"></i>
+      <h1>10+ billion</h1>
+      <p>Alerts Sent</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-user-friends"></i>
+      <h1>9+ million</h1>
+      <p>Users</p>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-city"></i>
+      <h1>60</h1>
+      <p>Cities</p>
+    </div>
+  </section>
+
+  <section>
+    <h3><i class="fas fa-heart"></i> Our Core Values</h3>
+    <p>
+      🔐 <strong>Transparency</strong> — We share facts, not fear.<br>
+      📍 <strong>Accuracy</strong> — All alerts are location-based and verified.<br>
+      🤝 <strong>Community</strong> — Designed for collaboration, not just consumption.<br>
+      📲 <strong>Accessibility</strong> — Lightweight and user-friendly on any device.
+    </p>
+  </section>
+
+  <section>
+    <h3><i class="fas fa-cogs"></i> The Technology Behind It</h3>
+    <p>Our platform uses a combination of real-time public data sources, machine learning, and manual moderation to deliver the most reliable alerts. Safety isn’t a luxury — it’s a system that should be available to all.</p>
+  </section>
+
+  <section>
+    <h3><i class="fas fa-hands-helping"></i> Get Involved</h3>
+    <p>
+      ➤ Become a volunteer moderator<br>
+      ➤ Contribute verified local updates<br>
+      ➤ Share safety resources in your neighborhood<br>
+      Join our mission to make your city smarter and safer — one alert at a time.
+    </p>
+  </section>
+
+  <section class="testimonial-section">
+    <h3><i class="fas fa-comment-alt"></i> What Our Users Say</h3>
+    <div class="testimonial-cards">
+      <div class="testimonial">
+                <p>"This app helped me avoid a dangerous area one night. Forever grateful!"</p>
+        <h4>- Priya M.</h4>
+      </div>
+      <div class="testimonial">
+         <p>"Easy to use and reliable. The alerts are always accurate."</p>
+        <h4>- Arjun S.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"I feel more confident walking around my neighborhood now."</p>
+        <h4>- Neha T.</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    Together, we can create safer streets, safer cities, and a safer future.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Safety Tips | CrimeAlert</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    nav.sidebar {
+      width: 200px;
+      background-color: #111;
+      padding: 10px 15px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    nav.sidebar h3 {
+      color: #f44336;
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    nav.sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav.sidebar ul li {
+      margin: 15px 0;
+    }
+
+    nav.sidebar ul li a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav.sidebar ul li a:hover {
+      color: #f44336;
+    }
+
+    .main-content {
+      flex: 1;
+      margin: 0;
+    }
+
+   
+header.navbar {
+  background-color: #000000;  /* Black navbar */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;  /* White logo for contrast */
+}
+
+.nav-links a {
+  color: #ffffff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #f39c12;  /* Yellow hover effect */
+}
+.login-button {
+  background-color: #e74c3c;  /* Red for login button */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-links a.login {
+      padding: 8px 14px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+
+    .login-button {
+      background-color: #e74c3c;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .page-title {
+      background-color: #111;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .section img {
+      width: 350px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+
+    .text-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .text-content h2 {
+      color: #f44336;
+      margin-bottom: 15px;
+    }
+
+    .text-content p {
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      nav.sidebar {
+        width: 100%;
+        height: auto;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+
+      .section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <h3>Quick Access</h3>
+      <ul>
+        <li><a href="#personal">👤 Personal</a></li>
+        <li><a href="#home">🏠 Home</a></li>
+        <li><a href="#online">🌐 Online</a></li>
+        <li><a href="#travel">🚗 Travel</a></li>
+        <li><a href="#public">🏙 Public</a></li>
+        <li><a href="#child">👶 Child</a></li>
+        <li><a href="#senior">👴 Senior</a></li>
+        <li><a href="#emergency">📞 Emergency</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header class="navbar">
+  <div class="logo">🛡 CrimeWatch</div>
+  <nav class="nav-links">
+    <a href="Home.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="crimereport.html">Crime Report</a>
+    <a href="livecrimealerts.html">Live Crime Alerts</a>
+    <a href="about.html">About</a>
+    <a href="crimestat.html">Crime Statistics</a>
+    <a href="safetytips.html">Safety Tips</a>
+  </nav>
+  <a href="register.html" class="login-button">Register/Login</a>
+</header>
+  
+  </nav>
+
+
+      <div class="page-title">
+        🛡 Safety Tips | CrimeAlert
+      </div>
+
+      <div class="section" id="personal">
+        <img src="https://p4companies.com/p4secure/wp-content/uploads/sites/3/2020/05/AdobeStock_71566599-scaled-1.jpeg" alt="Woman walking safely at night holding phone" />
+        <div class="text-content">
+          <h2>👤 Personal Safety</h2>
+          <p>Staying alert and trusting your instincts can go a long way in avoiding dangerous situations. Avoid poorly lit or secluded places at night and keep your phone easily accessible. Tools like a whistle, pepper spray, or flashlight can help in emergencies. If using rideshares, always share your live location with someone you trust.</p>
+        </div>
+      </div>
+
+      <div class="section reverse" id="home">
+        <img src="https://thumbs.dreamstime.com/b/hacker-breaks-home-security-217281428.jpg" alt="Hacker attempting to breach home security" />
+        <div class="text-content">
+          <h2>🏠 Home Safety</h2>
+          <p>Protecting your home starts with smart choices—install motion sensor lights, secure all doors and windows, and avoid announcing vacations online. Keeping valuables in safes and being part of neighborhood watch groups further enhances your home's security.</p>
+        </div>
+      </div>
+
+      <div class="section" id="online">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQdNiNHbv1Xx3mjkvhFRq4_yXL7v3sisrHuA&s" alt="Person browsing internet securely" />
+        <div class="text-content">
+          <h2>🌐 Online Safety</h2>
+          <p>Be cautious online. Never share sensitive information like OTPs or passwords, and double-check web links before clicking. Share minimal personal data on social media and talk to kids regularly about staying safe from cyberbullying and inappropriate content.</p>
+        </div>
+      </div>
+
+      <div class="section reverse" id="travel">
+        <img src="https://pinkerton.com/media/our-insights/blogs/98c493df-9533-4adc-8bf3-ef084674fbbc-1920.jpg" alt="Traveler staying alert in unfamiliar area" />
+        <div class="text-content">
+          <h2>🚗 Travel Safety</h2>
+          <p>While traveling, remain vigilant. Refrain from accepting food or drinks from strangers. Keep your ID and travel documents both digitally and physically. Use trusted navigation apps and avoid unfamiliar shortcuts. Always ensure your vehicle is locked, even for brief stops.</p>
+        </div>
+      </div>
+
+      <div class="section" id="public">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgiamqBvm3kyn2qudVGdSUGp7qb59LEIALcg&s" alt="Crowded public space awareness" />
+        <div class="text-content">
+          <h2>🏙 Public Space Safety</h2>
+          <p>In crowded public spaces, keep personal items close and stay aware of your surroundings. Tourist areas can be hotspots for pickpocketing. If you feel uncomfortable, stay close to areas with security personnel or surveillance.</p>
+        </div>
+      </div>
+
+      <div class="section reverse" id="child">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT502v5_BgIxak9Wrc5kYHwuw__EDAQY3vSn6DCEDT-JwMMJKXyMmNVXy6a17Pz25kQYjE&usqp=CAU" alt="Child with GPS band in public area" />
+        <div class="text-content">
+          <h2>👶 Child Safety</h2>
+          <p>Teach children about stranger danger and the importance of not accepting gifts or rides from unknown people. Use child ID bands or GPS trackers when in public places and make sure they know how to reach you or a trusted adult in case they get lost.</p>
+        </div>
+      </div>
+
+      <div class="section" id="senior">
+        <img src="https://cdn.prod.website-files.com/65aa4eff62a2dc29847bc8d6/6735ea8178dd3037b202ed06_image1.png" alt="Elderly person with home safety devices" />
+        <div class="text-content">
+          <h2>👴 Senior Citizen Safety</h2>
+          <p>Seniors should avoid sharing personal info with strangers over calls or at the door. Use peepholes, emergency pendants, and keep regular contact with trusted individuals. Secure important medical and identity documents and avoid answering unknown calls or emails.</p>
+        </div>
+      </div>
+
+      <div class="section reverse" id="emergency">
+        <img src="https://media.licdn.com/dms/image/v2/C4D12AQH7RA5F-NWoRQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1620035479520?e=2147483647&v=beta&t=8vfdSlOJefJJ7E-c6FQ2Ue01ben3WvMw0lp924Ux-k8" alt="Emergency contact icons on mobile" />
+        <div class="text-content">
+          <h2>📞 Emergency Contacts</h2>
+          <p>In any emergency, quick access to the right helpline is crucial. Save important numbers like Police (100), Ambulance (102), Women’s Helpline (1091), Cyber Crime (155260), and Senior Citizen Helpline (14567) in your phone and on paper backups.</p>
+        </div>
+      </div>
+
+      <footer>
+          Stay Safe. Stay Aware. | <strong>CrimeWatch</strong>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

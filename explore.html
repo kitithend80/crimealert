@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore | CrimeAlert</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+	/* Header Navbar */
+
+header.navbar {
+  background-color: #000000;  /* Black navbar */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;  /* White logo for contrast */
+}
+
+.nav-links a {
+  color: #ffffff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #f39c12;  /* Yellow hover effect */
+}
+.login-button {
+  background-color: #e74c3c;  /* Red for login button */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-links a.login {
+      padding: 8px 14px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+
+
+       .container {
+      display: flex;
+      height: calc(100vh - 60px);
+    }
+
+    .sidebar {
+      width: 320px;
+      background-color: #111;
+      padding: 20px;
+      overflow-y: auto;
+      border-right: 1px solid #222;
+    }
+
+    .sidebar h2 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+    .search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #888;
+}
+
+    .case {
+      background-color: #1a1a1a;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-left: 4px solid #f44336;
+      border-radius: 6px;
+    }
+
+    .case h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .case p {
+      font-size: 0.95rem;
+      color: #bbb;
+    }
+
+    .case span {
+      font-size: 0.8rem;
+      color: #777;
+      display: block;
+      margin-top: 4px;
+    }
+
+    .media-section {
+      flex: 1;
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      background-color: #111;
+    }
+
+    .video-container {
+      width: 30%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .map {
+      width: 90%;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(1) invert(1) brightness(0.9) contrast(1.2);
+    }
+    .location-dropdown select {
+       width: 100%;
+       padding: 10px 12px;
+       border: none;
+       background-color: #222;
+       color: #fff;
+       border-radius: 6px;
+       font-size: 0.95rem;
+       outline: none;
+}
+footer {
+  background-color: #111; 
+  height:300px;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  border-top: 1px solid #222; /* A subtle line on top */
+  color: #ccc; /* Match other text color */
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: white; /* Match hover color in navbar */
+}
+
+  </style>
+</head>
+<body>
+
+ <header class="navbar">
+  <div class="logo">🛡 CrimeWatch</div>
+  <nav class="nav-links">
+    <a href="Home.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="repcr.html">Crime Report</a>
+    <a href="livecrimealerts.html">Live Crime Alerts</a>
+    <a href="about.html">About</a>
+    <a href="crimestat.html">Crime Statistics</a>
+    <a href="safetytips.html">Safety Tips</a>
+  </nav>
+  <a href="register.html" class="login-button">Register/Login</a>
+</header>
+  
+  </nav>
+
+  <div class="container">
+    <aside class="sidebar">
+     <div class="search-bar">
+    <input type="text" placeholder="Search incidents..." />
+  </div>
+
+
+      <h2>Solved Cases</h2>
+
+      <div class="case">
+        <h3>Robbery</h3>
+        <p>Bandra, Mumbai</p>
+        <span>Case ID: MUM12345</span>
+      </div>
+
+      <div class="case">
+        <h3>Kidnapping</h3>
+        <p>Connaught Place, Delhi</p>
+        <span>Case ID: DEL56789</span>
+      </div>
+
+      <div class="case">
+        <h3>Cyber Crime</h3>
+        <p>Koramangala, Bengaluru</p>
+        <span>Case ID: BLR78901</span>
+      </div>
+
+      <div class="case">
+        <h3>Hit & Run</h3>
+        <p>Jayanagar, Bengaluru</p>
+        <span>Case ID: BLR55432</span>
+      </div>
+
+      <div class="case">
+        <h3>Drug Bust</h3>
+        <p>Colaba, Mumbai</p>
+        <span>Case ID: MUM67890</span>
+      </div>
+
+      <div class="case">
+        <h3>Chain Snatching</h3>
+        <p>Chandni Chowk, Delhi</p>
+        <span>Case ID: DEL44221</span>
+      </div>
+
+      <div class="case">
+        <h3>ATM Fraud</h3>
+        <p>Gariahat, Kolkata</p>
+        <span>Case ID: KOL10245</span>
+      </div>
+
+      <div class="case">
+        <h3>Stolen Vehicle Recovery</h3>
+        <p>T. Nagar, Chennai</p>
+        <span>Case ID: CHE21354</span>
+      </div>
+    </aside>
+
+    <div class="media-section">
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/F8yLTGqnrj8?autoplay=1&mute=1"
+          title="Crime Alert Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11610006204!2d72.74109836052713!3d19.08252232131983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63d3f47d7b9%3A0x1c6e0b4b2827a0d!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1642522699543!5m2!1sen!2sin"
+          loading="lazy"
+          allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+<footer>
+  <p>&copy; 2025 CrimeAlert | <a href="#">Contact</a> | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+
+        
+
+</footer>
+  
+</body>
+</html>

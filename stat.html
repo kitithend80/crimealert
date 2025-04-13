@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crime Statistics</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #000000;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+header.navbar {
+  background-color: #000000;  /* Black navbar */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;  /* White logo for contrast */
+}
+
+.nav-links a {
+  color: #ffffff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #f39c12;  /* Yellow hover effect */
+}
+.login-button {
+  background-color: #e74c3c;  /* Red for login button */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-links a.login {
+      padding: 8px 14px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+
+
+    h1, h2, h3, p {
+      color: #ffffff;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1 1 200px;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      text-align: center;
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      color: #ff4d4d;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #cccccc;
+    }
+
+    .category-section, .timeline {
+      background: #1a1a1a;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    .bar-label {
+      margin-bottom: 5px;
+      color: #dddddd;
+    }
+
+    .bar-fill {
+      height: 20px;
+      background: #390909;
+      border-radius: 10px;
+    }
+
+    .crime-highlight {
+      background: #330000;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-left: 5px solid #ff4d4d;
+      border-radius: 10px;
+    }
+
+    .event {
+      margin-bottom: 15px;
+      padding-left: 10px;
+      border-left: 3px solid #ff4d4d;
+    }
+
+    .region-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .region {
+      background: #262626;
+      padding: 15px;
+      border-radius: 10px;
+      border: 2px solid #390909;
+    }
+
+    .region h3 {
+      font-size: 1.2rem;
+      color: #ff6666;
+      margin-bottom: 8px;
+    }
+
+    .region p {
+      font-size: 0.9rem;
+      color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+ <header class="navbar">
+  <div class="logo">🛡 CrimeWatch</div>
+  <nav class="nav-links">
+    <a href="Home.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="crimereport.html">Crime Report</a>
+    <a href="livecrimealerts.html">Live Crime Alerts</a>
+    <a href="about.html">About</a>
+    <a href="crimestat.html">Crime Statistics</a>
+    <a href="safetytips.html">Safety Tips</a>
+  </nav>
+  <a href="register.html" class="login-button">Register/Login</a>
+</header>
+  
+  </nav>
+
+<hr>
+  <!-- Title -->
+  <header>
+    <h1 style="text-align: center; margin: 30px 0;">City Crime Statistics 2025</h1>
+  </header>
+
+  <!-- Dashboard Cards -->
+  <div class="cards">
+    <div class="card">
+      <h2>12,563</h2>
+      <p>Total Crimes Reported</p>
+    </div>
+    <div class="card">
+      <h2>3,420</h2>
+      <p>Theft Cases</p>
+    </div>
+    <div class="card">
+      <h2>2,198</h2>
+      <p>Cyber Crimes</p>
+    </div>
+    <div class="card">
+      <h2>78%</h2>
+      <p>Cases Resolved</p>
+    </div>
+  </div>
+
+  <!-- Category Breakdown -->
+  <div class="category-section">
+    <h2>Crime Categories</h2>
+    <div class="bar">
+      <div class="bar-label">Theft</div>
+      <div class="bar-fill" style="width: 80%; background-color: #d9534f;"></div>
+    </div>
+    <div class="bar">
+      <div class="bar-label">Cyber Crime</div>
+      <div class="bar-fill" style="width: 60%; background-color: #5bc0de;"></div>
+    </div>
+    <div class="bar">
+      <div class="bar-label">Assault</div>
+      <div class="bar-fill" style="width: 40%; background-color: #f0ad4e;"></div>
+    </div>
+    <div class="bar">
+      <div class="bar-label">Kidnapping</div>
+      <div class="bar-fill" style="width: 20%; background-color: #5cb85c;"></div>
+    </div>
+  </div>
+
+  <!-- Crime Highlight -->
+  <div class="event">
+    <h2>🔍 Crime of the Month</h2>
+    <p><strong>Case:</strong>Digital Financial Crimes Nationwide.</p>
+    <p><strong>Date:</strong> Throughout March 2025</p>
+    <p><strong>Status:</strong> The government and financial institutions are enhancing cybersecurity measures. However, experts recommend stricter regulations and increased public awareness to combat digital fraud effectively.​</p>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <h2>🗓️ Timeline of Major Crimes</h2>
+    <div class="event">
+      <p><strong>April 10:</strong> Robbery reported in West District.</p>
+    </div>
+    <div class="event">
+      <p><strong>April 6:</strong> Online fraud case exposed.</p>
+    </div>
+    <div class="event">
+      <p><strong>April 3:</strong> Assault in city park, 2 injured.</p>
+    </div>
+  </div>
+ <h2>📊 Graphs & Charts Area</h2>
+      <img src="https://assets.citizen.com/posa_assets/analytics-background-large.webp" alt="Crime Incident Image" style="width: 100%; max-width: 500px; margin: 20px 0;"><img src="https://images.hindustantimes.com/img/2022/08/29/1600x900/3bd21c20-27e0-11ed-84e0-35079b96d787_1661808077134.jpg" alt="Crime Incident Image" style="width: 100%; max-width: 500px; margin: 20px 0;"> 
+<img src="https://factly.in/wp-content/uploads//2019/11/Crime-in-India_Total-crimes-by-State-UT-2017-1024x672.jpg" alt="Crime Incident Image" style="width: 100%; max-width: 500px; margin: 20px 0;"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/2001_to_2011_Crime_rates_against_Scheduled_Castes%2C_Women_and_Overall_in_India_per_100%2C000_population.png/2560px-2001_to_2011_Crime_rates_against_Scheduled_Castes%2C_Women_and_Overall_in_India_per_100%2C000_population.png" alt="Crime Incident Image" style="width: 400px; max-width: 500px; margin: 20px 0;">
+<img src="C:\Users\Samhitha\OneDrive\Pictures\Screenshots\Screenshot 2025-04-12 215252.png" style="height:400px;">
+  </div>
+  <!-- Region Stats -->
+  <div class="category-section">
+    <h2>📍 Region-wise Summary</h2>
+    <div class="region-stats">
+      <div class="region">
+        <h3>Homicide (Murder) Rate:</h3><br>
+        <p>Delhi: 11.2 per 100,000 (2019)</p>
+        <p>Maharashtra: 2.3 per 100,000 (2019)</p>
+	<p>Kerala: 1.4 per 100,000 (2019)</p>
+	<p>Madhya Pradesh: 10.9 per 100,000 (2021)</p>
+	<p>Uttar Pradesh: 5.4 per 100,000 (2019)</p>
+      </div>
+      <div class="region">
+        <h3>Crimes Against Women (Rape, Domestic Violence, etc.):</h3><br>
+        <p>Delhi: 1,201 cases per 100,000 population (2019)</p>
+        <p>Kerala: 21.1 cases per 100,000 (2019)</p>
+	<p>Madhya Pradesh: 6,579 cases (2019)</p>
+	<p>Uttar Pradesh: 3,900 cases (2019)</p>
+	<p>West Bengal: 5,654 cases (2019)</p>
+      </div>
+      <div class="region">
+        <h3>Property Crimes (Burglary, Theft, etc.):</h3><br>
+        <p>Maharashtra: 28,872 cases (2019)</p>
+
+<p>Delhi: 31,757 cases (2019)</p>
+
+<p>Uttar Pradesh: 5,677 cases (2019)</p>
+
+<p>Karnataka: 6,193 cases (2019)</p>
+
+<p>Tamil Nadu: 9,295 cases (2019)</p>
+              </div>
+      <div class="region">
+        <h3>Cyber Crimes:</h3><br>
+        <p>Maharashtra: 4,738 cases (2019)</p>
+
+<p>Uttar Pradesh: 1,557 cases (2019)</p>
+
+<p>Andhra Pradesh: 897 cases (2019)</p>
+
+<p>Delhi: 9,637 cases (2019)<p>
+
+<p>Karnataka: 1,023 cases (2019)</p>
+   
+      </div>
+    </div>
+  </div>
+
+ 
+
+</body>
+</html>
